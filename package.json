@@ -1,0 +1,16 @@
+{
+  "name": "api-proxy",
+  "version": "1.0.0",
+  "description": "api-proxy",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sbalcin",
+  "license": "",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http-proxy": "^1.18.1"
+  }
+}
