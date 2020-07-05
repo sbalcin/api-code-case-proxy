@@ -1,7 +1,8 @@
+/*
 var http = require("http"), httpProxy = require("http-proxy");
 
-var port = 1011
-var target = 'https://sandbox-reporting.rpdpymnt.com'
+var port = 1011;
+var target = 'https://sandbox-reporting.rpdpymnt.com';
 
 var proxy = httpProxy.createProxyServer({});
 var sendError = function (res, err) {
@@ -52,3 +53,17 @@ var server = http.createServer(function (req, res) {
 });
 
 server.listen(port);
+*/
+
+const http = require('http');
+const port = process.env.PORT || 1011
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/html');
+  res.end('<h1>Hello World</h1>');
+});
+
+server.listen(port,() => {
+  console.log(`Server running at port `+port);
+});
